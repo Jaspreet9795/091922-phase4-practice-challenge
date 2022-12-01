@@ -6,8 +6,8 @@ class RestaurantPizzasController < ApplicationController
     end 
 
     def create 
-        pizza = RestaurantPizza.create!(pizza_params)
-            render json: pizza, status: :created , include: :pizza
+        pizza = RestaurantPizza.create!(pizza_params).pizza
+            render json: pizza, status: :created 
     
     end 
 
